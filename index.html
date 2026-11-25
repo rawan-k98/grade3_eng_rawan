@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="لعبة رياضيات تفاعلية للصف الثالث الأساسي">
+  <title>أبطال الرياضيات | الصف الثالث</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="brand"><span class="brand-icon">🧮</span><div><h1>أبطال الرياضيات</h1><p>الصف الثالث الأساسي · الوحدتان الثانية والثالثة</p></div></header>
+    <section class="panel" id="welcome-screen">
+      <div class="mascot-stage" aria-label="شخصيات اللعبة">
+<button class="character-choice selected" id="boy-choice" type="button" aria-label="اختيار براء"><img src="assets/boy.svg" alt="براء، شخصية كرتونية صبي"><span>براء 🧢</span></button>
+<button class="character-choice" id="girl-choice" type="button" aria-label="اختيار لانا"><img src="assets/girl.svg" alt="لينا، شخصية كرتونية فتاة"><span>لانا 🌸</span></button>
+</div><h2>مستعد لتحدي الرياضيات؟</h2>
+      <p>اختبر مهاراتك واجمع النجوم. في كل جولة 15 سؤالاً متنوعاً مع وقت لكل سؤال!</p>
+      <div class="info-pills"><span>📚 الوحدة الثانية</span><span>➕➖ الوحدة الثالثة</span><span>⏱️ 20 ثانية</span></div>
+      <label class="select-label" for="unit-select">اختر مجموعة الأسئلة</label>
+      <select id="unit-select"><option value="all">الوحدتان معاً</option><option value="2">الوحدة الثانية فقط</option><option value="3">الوحدة الثالثة فقط</option></select>
+      <button id="start-btn" class="primary">ابدأ اللعب 🚀</button>
+    </section>
+    <section class="panel game-panel hidden" id="game-screen">
+      <div class="topline"><span id="unit-badge" class="badge">الوحدة</span><span class="hearts" id="lives">❤️❤️❤️</span></div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <div class="stats"><span id="question-count">السؤال 1 / 15</span><span>⭐ <b id="score">0</b></span><span class="timer">⏱ <b id="time">20</b></span></div>
+      <div class="question-card"><div class="question-mascot"><img id="game-mascot" src="assets/boy.svg" alt="شخصية اللعبة"><div class="question-emoji" id="question-emoji">🤔</div></div><h2 id="question-text">السؤال هنا</h2></div>
+      <div class="answers" id="answers"></div>
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+      <button id="next-btn" class="primary hidden">السؤال التالي ⬅</button>
+    </section>
+    <section class="panel hidden" id="result-screen">
+      <div class="hero" id="result-emoji">🏆</div><h2 id="result-title">نتيجتك</h2><p class="final-score" id="final-score"></p><p id="result-message"></p>
+      <div class="result-actions"><button id="retry-btn" class="primary">العب مرة أخرى 🔄</button><button id="home-btn" class="secondary">الصفحة الرئيسية</button></div>
+    </section>
+    <footer>✨ التعلم يصبح أجمل عندما نلعب ✨</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
